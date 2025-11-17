@@ -34,3 +34,49 @@
 ```bash
 git clone https://github.com/USERNAME/studyhub-planner.git
 cd studyhub-planner
+3. Примеры использования
+3.1. Основной сценарий
+
+Откройте приложение в браузере.
+
+В форме «Добавить задачу» укажите:
+
+название задания;
+
+предмет (например, «Математика», «Программирование»);
+
+дату дедлайна;
+
+приоритет (низкий / средний / высокий).
+
+Нажмите кнопку «Добавить задачу».
+
+Найдите задачу в списке:
+
+отметьте её как выполненную, когда закончите;
+
+при необходимости отфильтруйте список по статусу или предмету.
+
+3.2. Пример кода компонента задачи
+// src/components/TaskItem.jsx
+import React from "react";
+
+function TaskItem({ task, onToggleComplete, onDelete }) {
+  return (
+    <li className={`task-item ${task.completed ? "task-item--done" : ""}`}>
+      <div>
+        <strong>{task.title}</strong> — {task.subject}
+        <div>Дедлайн: {task.deadline}</div>
+        <div>Приоритет: {task.priority}</div>
+      </div>
+      <div className="task-item__actions">
+        <button onClick={() => onToggleComplete(task.id)}>
+          {task.completed ? "Вернуть в работу" : "Отметить выполненной"}
+        </button>
+        <button onClick={() => onDelete(task.id)}>Удалить</button>
+      </div>
+    </li>
+  );
+}
+
+export default TaskItem;
