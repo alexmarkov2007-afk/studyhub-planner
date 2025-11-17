@@ -166,8 +166,8 @@ studyhub-planner/
 
 **Технологии:**
 
-* React **18+**
-* Vite **5+**
+* React 
+* Vite 
 * JavaScript (ES6+)
 * CSS
 
