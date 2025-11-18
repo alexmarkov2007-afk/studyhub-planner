@@ -123,32 +123,6 @@ function TaskItem({ task, onToggle, onDelete }) {
 
 ---
 
-##  4. Структура репозитория
-
-```
-studyhub-planner/
-├── public/
-│   └── index.html
-├── src/
-│   ├── components/
-│   │   ├── Header.jsx
-│   │   ├── TaskForm.jsx
-│   │   ├── TaskList.jsx
-│   │   ├── TaskItem.jsx
-│   │   └── FilterBar.jsx
-│   ├── pages/
-│   │   └── Dashboard.jsx
-│   ├── styles/
-│   │   └── main.css
-│   ├── App.jsx
-│   └── main.jsx
-├── package.json
-├── vite.config.js
-├── .gitignore
-└── README.md
-```
-
----
 
 ##  5. Технические требования
 
